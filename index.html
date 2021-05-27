@@ -4,14 +4,53 @@
   <title>Pathfinding Visualizer</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link id="cssTheme" rel="stylesheet" href="public/styling/cssBasic.css" />
-  <link id="cssLegend" rel="stylesheet" href="public/styling/legend-overlay.css" />
+  <link id="cssLegend" rel="stylesheet" href="public/mca-2020/legend-overlay.css" />
+  <link id="newNavBar" rel="stylesheet" href="public/mca-2020/newNavBar.css" />
+  <link id="sawan+hemant" rel="stylesheet" href="public/mca-2020/pre_loader.css">
   <link rel="shortcut icon" type="image/png" href="public/styling/c_icon.png" />
 </head>
 
 <body>
-  <div id="legend-overlay-button">Legends</div>
   <div id="legend-overlay">
-    
+    <div id="legend-back-white">
+      <div id="legend-title">Legends To Pathfinding</div>
+      <div id="legend-items">
+        <div class="legend-item" id="1">
+          <img src="./public/styling/triangletwo-right.svg">
+          <div class="legend-text"> Start Node</div>
+        </div>
+        <div id="2" class="legend-item">
+          <img src="./public/styling/circle.svg">
+          <div class="legend-text"> Target Node</div>
+        </div>
+        <div class="legend-item" id="3">
+          <img src="./public/styling/diamond.svg">
+          <div class="legend-text"> Bomb Node</div>
+        </div>
+        <div class="legend-item" id="4">
+          <img src="./public/styling/weight.svg">
+          <div class="legend-text"> Weight Node</div>
+        </div>
+        <div class="legend-item" id="5">
+          <div id="unvisited-node"></div>
+          <div class="legend-text"> Unvisited Node</div>
+        </div>
+        <div class="legend-item" id="6">
+          <div id="visited-node-1"></div>
+          <div id="visited-node-2"></div>
+          <div class="legend-text"> Visited Node</div>
+        </div>
+        <div class="legend-item" id="7">
+          <div id="shortest-path"></div>
+          <div class="legend-text"> Shortest-path Node</div>
+        </div>
+        <div class="legend-item" id="8">
+          <div id="wall-node"></div>
+          <div class="legend-text"> Wall Node</div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
   <div id='navbarDiv'>
     <nav class="navbar navbar-inverse">
@@ -75,43 +114,54 @@
     <button id="previousButton" class="btn btn-default navbar-btn" type="button">Previous</button>
     <button id="skipButton" class="btn btn-default navbar-btn" type="button">Skip Tutorial</button>
   </div>
-  <div id='mainGrid'>
-    <div id='mainText'>
-      <ul>
-        <li>
-          <div class="start"></div>Start Node
-        </li>
-        <li>
-          <div class="target"></div>Target Node
-        </li>
-        <li id="bombLegend">
-          <div class="object"></div>Bomb Node
-        </li>
-        <li id="weightLegend">
-          <div class="borderlessWeight"></div>Weight Node
-        </li>
-        <li>
-          <div class="unvisited"></div>Unvisited Node
-        </li>
-        <li>
-          <div class="visited"></div>
-          <div class="visitedobject"></div>Visited Nodes
-        </li>
-        <li>
-          <div class="shortest-path"></div>Shortest-path Node
-        </li>
-        <li>
-          <div class="wall"></div>Wall Node
-        </li>
-      </ul>
-    </div>
-    <div id="algorithmDescriptor">Pick an algorithm and visualize it!</div>
-    <table id='board' />
+  <div id="newNavBar">
+    <button id="color-button" class="btn btn-default navbar-btn" type="button">
+      Change Color
+    </button>
+    <div id="legend-overlay-button">Legends</div>
   </div>
+  <div class="color-change-button">
+
+    <div id='mainGrid'>
+      <div id='mainText'>
+        <ul>
+          <li>
+            <div class="start"></div>Start Node
+          </li>
+          <li>
+            <div class="target"></div>Target Node
+          </li>
+          <li id="bombLegend">
+            <div class="object"></div>Bomb Node
+          </li>
+          <li id="weightLegend">
+            <div class="borderlessWeight"></div>Weight Node
+          </li>
+          <li>
+            <div class="unvisited"></div>Unvisited Node
+          </li>
+          <li>
+            <div class="visited"></div>
+            <div class="visitedobject"></div>Visited Nodes
+          </li>
+          <li>
+            <div class="shortest-path"></div>Shortest-path Node
+          </li>
+          <li>
+            <div class="wall"></div>Wall Node
+          </li>
+        </ul>
+      </div>
+      <div id="algorithmDescriptor">Pick an algorithm and visualize it!</div>
+      <table id='board' />
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src='public/browser/bundle.js'></script>
-<script src='public/browser/legend-overlay.js'></script>
+<script src='public/mca-2020/legend-overlay.js'></script>
+<script src='public/mca-2020/background_color_change.js'></script>
+<script src="public/mca-2020/pre_loader.js"></script>
+<script src="public/mca-2020/sound.js"></script>
 
 </html>
